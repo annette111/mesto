@@ -1,0 +1,10 @@
+.name {
+    font-family: 'Inter', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 39px;
+    /* or 114% */
+    color: #FFFFFF;
+    padding-right: 18px;
+}
