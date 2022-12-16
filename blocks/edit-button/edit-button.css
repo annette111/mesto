@@ -8,3 +8,8 @@
     background-repeat: no-repeat;
     align-self: center;
 }
+
+.edit-button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
