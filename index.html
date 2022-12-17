@@ -57,10 +57,24 @@
                 <button class="element__button element__button_active"></button>
             </article>
         </section>
+        <div class="popup popup_opened">
+            <form class="popup__container">
+                <p class="popup__title">Редактировать профиль</p>
+                <img src="images/Close Icon.svg" class="popup__close">
+                <label>
+                    <input type="text" name="name">
+                </label>
+                <label>
+                    <input type="text" name="about-self">
+                </label>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
     </main>
     <footer class="footer">
         <p class="footer__copyright">&copy; 2020. Mesto Russia</p>
     </footer>
+    <script src="pages/script.js"></script>
 </body>
 
 </html>
