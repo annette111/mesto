@@ -57,18 +57,20 @@
                 <button class="element__button element__button_active"></button>
             </article>
         </section>
-        <div class="popup popup_opened">
-            <form class="popup__container">
-                <p class="popup__title">Редактировать профиль</p>
-                <img src="images/Close Icon.svg" class="popup__close">
-                <label>
-                    <input type="text" name="name">
-                </label>
-                <label>
-                    <input type="text" name="about-self">
-                </label>
-                <button type="submit">Отправить</button>
-            </form>
+        <div class="popup">
+            <div class="popup__container">
+                <button class="popup__close"></button>
+                <form class="popup__form">
+                    <p class="popup__title">Редактировать профиль</p>
+                    <label>
+                        <input class="popup__name" type="text" name="name">
+                    </label>
+                    <label>
+                        <input class="popup__about-self" type="text" name="about-self">
+                    </label>
+                    <button class="popup__submit" type="submit">Сохранить</button>
+                </form>
+            </div>
         </div>
     </main>
     <footer class="footer">
