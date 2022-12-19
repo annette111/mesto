@@ -19,4 +19,6 @@
 
 **GitPages**
 
-* [Ссылка на макет в GitPages](https://annette111.github.io/#/)
+* [Ссылка на макет в GitPages](https://annette111.github.io/mesto/)
+
+
