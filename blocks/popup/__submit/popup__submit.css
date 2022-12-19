@@ -2,7 +2,7 @@
     margin-bottom: 37px;
     color: white;
     background-color: black;
-    width: 358px;
+    width: 100%;
     height: 50px;
     padding: 0;
     border: none;
@@ -18,4 +18,12 @@
     opacity: 0.6;
     cursor: pointer;
 
+}
+
+@media screen and (max-width: 724px) {
+    .popup__submit {
+        max-width: 238px;
+        padding: 0;
+        margin: 0 22px 25px;
+    }
 }

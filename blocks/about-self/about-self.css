@@ -8,7 +8,7 @@
     padding-top: 16px;
 }
 
-@media screen and (max-width: 724px) {
+@media screen and (max-width: 970px) {
     .about-self {
         font-size: 14px;
         line-height: 7px;

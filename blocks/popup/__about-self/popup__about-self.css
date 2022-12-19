@@ -15,3 +15,11 @@
 .popup__about-self:focus {
     outline: none;
 }
+
+@media screen and (max-width: 724px) {
+    .popup__about-self {
+        max-width: 238px;
+        padding: 0;
+        margin: 0 22px 45px 22px;
+    }
+}
