@@ -1,0 +1,8 @@
+.element__button_active {}
+
+.element__button_active:active,
+.element__button_active::before,
+.element__button_active::after {
+    background-image: url(../../../../images/like-black.svg);
+    opacity: 1;
+}

@@ -1,0 +1,17 @@
+.about-self {
+    font-family: 'Inter', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 15px;
+    color: #FFFFFF;
+    padding-top: 16px;
+}
+
+@media screen and (max-width: 970px) {
+    .about-self {
+        font-size: 14px;
+        line-height: 7px;
+        padding-top: 14px;
+    }
+}
