@@ -3,3 +3,9 @@
     max-height: 120px;
     clip-path: ellipse();
 }
+
+@media screen and (max-width: 724px) {
+    .profile__avatar {
+        margin: 0 auto 0;
+    }
+}

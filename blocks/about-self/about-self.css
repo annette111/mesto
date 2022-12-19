@@ -7,3 +7,11 @@
     color: #FFFFFF;
     padding-top: 16px;
 }
+
+@media screen and (max-width: 724px) {
+    .about-self {
+        font-size: 14px;
+        line-height: 7px;
+        padding-top: 14px;
+    }
+}
