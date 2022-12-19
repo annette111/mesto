@@ -1,0 +1,17 @@
+.popup__about-self {
+    border: 0;
+    border-bottom: 1px solid grey;
+    width: 358px;
+    height: 27px;
+    margin-bottom: 48px;
+    font-family: 'Inter', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+}
+
+.popup__about-self:focus {
+    outline: none;
+}
