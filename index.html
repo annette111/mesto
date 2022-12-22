@@ -13,66 +13,64 @@
 <body class="page">
     <header class="header">
         <img class="header__logo" src="images/Vector.svg" alt="логотип Место">
-        <img class="header__line" src="images/Line.svg" alt="Линия">
     </header>
     <main class="content">
-        <section class="profile">
+        <section class="profile" aria-label="профиль">
             <img class="profile__avatar" src="images/image.jpg" alt="аватарка">
             <div class="profile__info">
-                <div class="name">Жак-Ив Кусто</div>
-                <button class="edit-button"></button>
-                <div class="about-self">Исследователь океана</div>
+                <h1 class="profile__info-name">Жак-Ив Кусто</h1>
+                <button class="profile__info-button" type="button" aria-label="Редактировать профиль"></button>
+                <p class="profile__info-self">Исследователь океана</p>
             </div>
-            <button class="profile__add-button"></button>
+            <button class="profile__add-button" type="button" aria-label="Добавить"></button>
         </section>
-        <section class="elements">
+        <section class="elements" aria-label="карточка места">
             <article class="element">
                 <img class="element__image" src="images/nikita-zakharov-volgograd.jpg" alt="Волгоград">
                 <h2 class="element__title">Волгоград</h2>
-                <button class="element__button element__button_active"></button>
+                <button class="element__button element__button_active" type="button"></button>
             </article>
             <article class="element">
                 <img class="element__image" src="images/mikhail-vasilyev-Tulinovka.jpg" alt="Тулиновка">
                 <h2 class="element__title">Тулиновка</h2>
-                <button class="element__button element__button_active"></button>
+                <button class="element__button element__button_active" type="button"></button>
             </article>
             <article class="element">
                 <img class="element__image" src="images/pavel-marianov-altai.jpg" alt="Алтай">
                 <h2 class="element__title">Алтай</h2>
-                <button class="element__button element__button_active"></button>
+                <button class="element__button element__button_active" type="button"></button>
             </article>
             <article class="element">
                 <img class="element__image" src="images/nikolay-vorobyev-sudak.jpg" alt="Судак">
                 <h2 class="element__title">Судак</h2>
-                <button class="element__button element__button_active"></button>
+                <button class="element__button element__button_active" type="button"></button>
             </article>
             <article class="element">
                 <img class="element__image" src="images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаево-Черкессия">
                 <h2 class="element__title">Карачаево-Черкессияdfv</h2>
-                <button class="element__button element__button_active"></button>
+                <button class="element__button element__button_active" type="button"></button>
             </article>
             <article class="element">
                 <img class="element__image" src="images/kirill-pershin-1556355-unsplash.jpg" alt="Домбай">
                 <h2 class="element__title">Домбай</h2>
-                <button class="element__button element__button_active"></button>
+                <button class="element__button element__button_active" type="button"></button>
             </article>
         </section>
-        <div class="popup">
-            <div class="popup__container">
-                <button class="popup__close"></button>
-                <form class="popup__form">
-                    <p class="popup__title">Редактировать профиль</p>
-                    <label>
-                        <input class="popup__name" type="text" name="name">
-                    </label>
-                    <label>
-                        <input class="popup__about-self" type="text" name="about-self">
-                    </label>
-                    <button class="popup__submit" type="submit">Сохранить</button>
-                </form>
-            </div>
-        </div>
     </main>
+    <div class="popup">
+        <div class="popup__container">
+            <button class="popup__close" type="button"></button>
+            <p class="popup__title">Редактировать профиль</p>
+            <form class="popup__form" name="profile-form">
+
+                <input class="popup__input popup__input_type_name" type="text" name="name" placeholder="Введите имя">
+                <input class="popup__input popup__input_type_about-self" type="text" name="about-self"
+                    placeholder="Расскажите о себе">
+
+            </form>
+            <button class="popup__submit" type="submit">Сохранить</button>
+        </div>
+    </div>
     <footer class="footer">
         <p class="footer__copyright">&copy; 2020. Mesto Russia</p>
     </footer>

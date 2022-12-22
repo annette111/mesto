@@ -1,17 +1,21 @@
-.about-self {
+.profile__info-self {
     font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
-    line-height: 15px;
+    line-height: 93.75%;
     color: #FFFFFF;
     padding-top: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
 }
 
 @media screen and (max-width: 970px) {
-    .about-self {
+    .profile__info-self {
         font-size: 14px;
-        line-height: 7px;
+        line-height: 106.25%;
         padding-top: 14px;
     }
 }

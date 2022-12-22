@@ -2,6 +2,7 @@
     max-width: 120px;
     max-height: 120px;
     clip-path: ellipse();
+    object-fit: cover;
 }
 
 @media screen and (max-width: 724px) {
