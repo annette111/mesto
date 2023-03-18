@@ -17,11 +17,12 @@ let elements = document.querySelector('.elements');
 //поля ввода в добавлении карточки
 let placeInput = document.querySelector('.popup__input_type_place')
 let urlInput = document.querySelector('.popup__input_type_url')
-//попап добавить карточку
+let elemImage = document.querySelector('.element__image')
+let elemTitle = document.querySelector('.element__title')
+//форма попап добавить карточку
 let addCardPopUp = document.querySelector('.popup__add-card')
 //кнопка добавления карточки
 let openAddPopUp = document.querySelector('.profile__add-button')
-
 // слушатель кнопки редактор профиля
 openPopUp.addEventListener('click', () => {
   nameInput.value = infoName.textContent;
@@ -31,8 +32,6 @@ openPopUp.addEventListener('click', () => {
 
 // слушатель кнопки добавить карточку
 openAddPopUp.addEventListener('click', () => {
-  // placeInput.value = '';
-  //urlInput.value = '';
   showPopUp(addCardPopUp);
 });
 
@@ -55,7 +54,7 @@ function handleFormSubmit(evt) {
   evt.preventDefault();
   infoName.textContent = nameInput.value;
   infoSelf.textContent = jobInput.value;
-  hidePopUp();
+  hidePopUp(evt.target.closest('.popup'));
 }
 
 formElement.addEventListener('submit', handleFormSubmit);
@@ -87,12 +86,30 @@ const initialCards = [
   }
 ];
 
-initialCards.forEach(function (addCards) {
-  const cardTemplate = document.querySelector('#card-template').content.cloneNode(true);
-  const cardElement = cardTemplate.querySelector('.element');
+function newCard(addCard) {
+  const cardTemplate = document.querySelector('#card-template').content;
+  const cardElement = cardTemplate.querySelector('.element').cloneNode(true);
   const nameCard = cardElement.querySelector('.element__title');
-  nameCard.textContent = addCards.name;
+  nameCard.textContent = addCard.name;
   const imageCard = cardElement.querySelector('.element__image');
-  imageCard.setAttribute('src', addCards.link);
+  imageCard.setAttribute('src', addCard.link);
+  cardElement.querySelector('.element__button').addEventListener('click', function (event) {
+    event.target.classList.toggle('element__button_active');
+  });
   elements.prepend(cardElement);
-})
+}
+
+initialCards.forEach(newCard)
+
+function cardSubmit(evt) {
+  evt.preventDefault();
+  const form = evt.target;
+  const card = {
+    name: placeInput.value,
+    link: urlInput.value,
+  };
+  formElement.reset();
+  newCard(card);
+  hidePopUp(form.closest('.popup'));
+}
+addCardPopUp.addEventListener('submit', cardSubmit);
