@@ -1,0 +1,15 @@
+.element__button-delete {
+    width: 18px;
+    height: 19px;
+    grid-row: 1;
+    grid-column: 2;
+    z-index: 2;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0);
+    position: relative;
+    top: 20px;
+    right: 20px;
+    border: none;
+    align-self: start;
+    justify-self: end;
+}
