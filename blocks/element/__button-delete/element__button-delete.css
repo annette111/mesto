@@ -12,4 +12,9 @@
     border: none;
     align-self: start;
     justify-self: end;
+    cursor: pointer;
+}
+
+.element__button-delete:hover {
+    opacity: 0.6;
 }
