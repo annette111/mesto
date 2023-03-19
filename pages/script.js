@@ -23,6 +23,8 @@ let elemTitle = document.querySelector('.element__title')
 let addCardPopUp = document.querySelector('.popup__add-card')
 //кнопка добавления карточки
 let openAddPopUp = document.querySelector('.profile__add-button')
+
+
 // слушатель кнопки редактор профиля
 openPopUp.addEventListener('click', () => {
   nameInput.value = infoName.textContent;
@@ -97,6 +99,9 @@ function newCard(addCard) {
     event.target.classList.toggle('element__button_active');
   });
   elements.prepend(cardElement);
+  //кнопка удаления карточки
+  let buttonDelete = document.querySelector('.element__button-delete');
+  buttonDelete.addEventListener('click', deleteCard);
 }
 
 initialCards.forEach(newCard)
@@ -113,3 +118,12 @@ function cardSubmit(evt) {
   hidePopUp(form.closest('.popup'));
 }
 addCardPopUp.addEventListener('submit', cardSubmit);
+
+//функция удаления
+
+function deleteCard(event) {
+  let buttonDelete = event.target;
+  let elementDel = buttonDelete.closest('.element');
+  elementDel.remove();
+};
+
