@@ -8,9 +8,6 @@
     max-width: 330px;
     box-sizing: border-box;
     margin: 34px 28px 49px 0;
-    /*margin-top: 35px;
-    margin-right: 28px;
-    margin-bottom: 49px;*/
 }
 
 @media screen and (max-width: 724px) {
