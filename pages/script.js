@@ -1,31 +1,31 @@
 //кнопка редактирования профиля
-let openPopUp = document.querySelector('.profile__info-button');
+const openPopUp = document.querySelector('.profile__info-button');
 //кнопка закрытия попапа
-let closePopUp = document.querySelectorAll('.popup__close');
+const closePopUp = document.querySelectorAll('.popup__close');
 //попап
-let popUp = document.querySelector('.popup');
+const popUp = document.querySelector('.popup');
 //попап редактировать профиль
-let editFormPopUp = document.querySelector('.popup__edit-form')
+const editFormPopUp = document.querySelector('.popup__edit-form')
 //форма попапа
-let formElement = document.querySelector('.popup__form');
+const formElement = document.querySelector('.popup__form');
 //поля ввода в профиле
-let nameInput = document.querySelector('.popup__input_type_name');
-let infoName = document.querySelector('.profile__info-name');
-let jobInput = document.querySelector('.popup__input_type_about-self');
-let infoSelf = document.querySelector('.profile__info-self');
-let elements = document.querySelector('.elements');
+const nameInput = document.querySelector('.popup__input_type_name');
+const infoName = document.querySelector('.profile__info-name');
+const jobInput = document.querySelector('.popup__input_type_about-self');
+const infoSelf = document.querySelector('.profile__info-self');
+const elements = document.querySelector('.elements');
 //поля ввода в добавлении карточки
-let placeInput = document.querySelector('.popup__input_type_place')
-let urlInput = document.querySelector('.popup__input_type_url')
-let imageCard = document.querySelector('.element__image')
-let nameCard = document.querySelector('.element__title')
+const placeInput = document.querySelector('.popup__input_type_place')
+const urlInput = document.querySelector('.popup__input_type_url')
+const imageCard = document.querySelector('.element__image')
+const nameCard = document.querySelector('.element__title')
 //форма попап добавить карточку
-let addCardPopUp = document.querySelector('.popup__add-card')
+const addCardPopUp = document.querySelector('.popup__add-card')
 //кнопка добавления карточки
-let openAddPopUp = document.querySelector('.profile__add-button')
-let openCardPopup = document.querySelector('.popup__open-card');
-let imageOpenPopup = document.querySelector('.popup__open-image-foto');
-let titleOpenPopup = document.querySelector('.popup__open-image-title');
+const openAddPopUp = document.querySelector('.profile__add-button')
+const openCardPopup = document.querySelector('.popup__open-card');
+const imageOpenPopup = document.querySelector('.popup__open-image-foto');
+const titleOpenPopup = document.querySelector('.popup__open-image-title');
 
 const initialCards = [
   {
@@ -105,7 +105,7 @@ function newCard(addCard) {
   });
   elements.prepend(cardElement);
   //кнопка удаления карточки
-  let buttonDelete = document.querySelector('.element__button-delete');
+  const buttonDelete = document.querySelector('.element__button-delete');
   buttonDelete.addEventListener('click', deleteCard);
   imageCard.addEventListener('click', function openPopUp() {
     imageOpenPopup.src = addCard.link;
