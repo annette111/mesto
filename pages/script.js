@@ -5,7 +5,7 @@ const closePopUp = document.querySelectorAll('.popup__close');
 //попап
 const popUp = document.querySelector('.popup');
 //попап редактировать профиль
-const editFormPopUp = document.querySelector('.popup__edit-form')
+const editFormPopUp = document.querySelector('.popup-edit-form')
 //форма попапа
 const formElement = document.querySelector('.popup__form');
 //поля ввода в профиле
@@ -20,10 +20,10 @@ const urlInput = document.querySelector('.popup__input_type_url')
 const imageCard = document.querySelector('.element__image')
 const nameCard = document.querySelector('.element__title')
 //форма попап добавить карточку
-const addCardPopUp = document.querySelector('.popup__add-card')
+const addCardPopUp = document.querySelector('.popup-add-card')
 //кнопка добавления карточки
 const openAddPopUp = document.querySelector('.profile__add-button')
-const openCardPopup = document.querySelector('.popup__open-card');
+const openCardPopup = document.querySelector('.popup-open-card');
 const imageOpenPopup = document.querySelector('.popup__open-image-foto');
 const titleOpenPopup = document.querySelector('.popup__open-image-title');
 
