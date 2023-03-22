@@ -74,12 +74,7 @@ function handleFormSubmit(evt) {
 
 
 function createCard(addCard) {
-  function openPopUpImage() {
-    openImageCard.src = addCard.link;
-    openImageCard.src = addCard.name;
-    openTitleCard.textContent = addCard.name;
-    showPopUp(popupPictureOpen);
-  }
+
   const cardElement = cardTemplate.content.cloneNode(true);
   const titleCard = cardElement.querySelector('.element__title');
   const buttonDelete = cardElement.querySelector('.element__button-delete');
@@ -87,6 +82,14 @@ function createCard(addCard) {
   const btnLike = cardElement.querySelector('.element__button');
   titleCard.textContent = addCard.name;
   imageCard.addEventListener('click', openPopUpImage);
+
+  function openPopUpImage() {
+    openImageCard.src = addCard.link;
+    // openImageCard.src = addCard.name;
+    openTitleCard.textContent = addCard.name;
+    showPopUp(popupPictureOpen);
+  };
+
   imageCard.setAttribute('src', addCard.link);
   imageCard.setAttribute('alt', addCard.name);
   btnLike.addEventListener('click', switchLike);
