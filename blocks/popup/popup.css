@@ -11,4 +11,5 @@
     align-items: center;
     transition: all 0.5s ease;
     opacity: 0;
+    z-index: 5;
 }

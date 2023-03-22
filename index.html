@@ -27,11 +27,11 @@
         <section class="elements" aria-label="карточка места">
         </section>
     </main>
-    <div class="popup popup-edit-form">
+    <div class="popup popup_type_profile">
         <div class="popup__container">
             <button class="popup__close" type="button"></button>
             <p class="popup__title">Редактировать профиль</p>
-            <form class="popup__form" name="profile-form">
+            <form class="popup__form" id="profile-form">
                 <input class="popup__input popup__input_type_name" type="text" name="name" placeholder="Введите имя">
                 <input class="popup__input popup__input_type_about-self" type="text" name="about-self"
                     placeholder="Расскажите о себе">
@@ -39,11 +39,11 @@
             </form>
         </div>
     </div>
-    <div class="popup popup-add-card">
+    <div class="popup popup_type_card-add">
         <div class="popup__container">
             <button class="popup__close" type="button"></button>
             <p class="popup__title">Новое место</p>
-            <form class="popup__form" name="card-form">
+            <form class="popup__form" id="card-form">
                 <input class="popup__input popup__input_type_place" type="text" name="place" placeholder="Название">
                 <input class="popup__input popup__input_type_url" type="url" name="url"
                     placeholder="Ссылка на картинку">
@@ -51,7 +51,7 @@
             </form>
         </div>
     </div>
-    <div class="popup popup-open-card">
+    <div class="popup popup_type_picture">
         <div class="popup__open-image">
             <button class="popup__close popup__open-image-close" type="button"></button>
             <img class="popup__open-image-foto" src="#">
@@ -71,6 +71,7 @@
             <button class="element__button" type="button"></button>
         </article>
     </template>
+    <script src="pages/cards.js"></script>
     <script src="pages/script.js"></script>
 </body>
 
