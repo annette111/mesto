@@ -25,6 +25,7 @@ const popupPictureOpen = document.querySelector('.popup_type_picture');
 const imageCardOpen = document.querySelector('.popup__open-image-foto');
 const titleCardOpen = document.querySelector('.popup__open-image-title');
 const cardTemplate = document.querySelector('#card-template');
+const popups = document.querySelectorAll('.popup')
 
 
 // слушатель кнопки редактор профиля
@@ -131,3 +132,10 @@ function closePopupEsc(evt) {
   }
 }
 
+popups.forEach((popup) => {
+  popup.addEventListener("click", function (evt) {
+    if (evt.target.classList.contains("popup_opened") || evt.target.classList.contains("popup__close")) {
+      hidePopUp(popup);
+    }
+  });
+});
