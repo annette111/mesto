@@ -32,9 +32,11 @@
             <button class="popup__close" type="button"></button>
             <p class="popup__title">Редактировать профиль</p>
             <form class="popup__form" id="profile-form">
-                <input class="popup__input popup__input_type_name" type="text" name="name" placeholder="Введите имя">
+                <input class="popup__input popup__input_type_name" type="text" name="name" placeholder="Введите имя"
+                    minlength="2" maxlength="40" required>
                 <input class="popup__input popup__input_type_about-self" type="text" name="about-self"
-                    placeholder="Расскажите о себе">
+                    placeholder="Расскажите о себе" minlength="2" maxlength="200" required>
+                <span class="form__input-error"></span>
                 <button class="popup__submit" type="submit">Сохранить</button>
             </form>
         </div>
@@ -44,9 +46,10 @@
             <button class="popup__close" type="button"></button>
             <p class="popup__title">Новое место</p>
             <form class="popup__form" id="card-form">
-                <input class="popup__input popup__input_type_place" type="text" name="place" placeholder="Название">
-                <input class="popup__input popup__input_type_url" type="url" name="url"
-                    placeholder="Ссылка на картинку">
+                <input class="popup__input popup__input_type_place" type="text" name="place" placeholder="Название"
+                    minlength="2" maxlength="30" required>
+                <input class="popup__input popup__input_type_url" type="url" name="url" placeholder="Ссылка на картинку"
+                    required>
                 <button class="popup__submit" type="submit">Сохранить</button>
             </form>
         </div>

@@ -46,11 +46,13 @@ popupCloseButtons.forEach((button) => {
 //функция открытия попапа
 function showPopUp(popUp) {
   popUp.classList.add('popup_opened');
+  document.addEventListener('keydown', closePopupEsc);
 };
 
 //функция закрытия попапа
 function hidePopUp(popUp) {
   popUp.classList.remove('popup_opened');
+  document.removeEventListener('keydown', closePopupEsc);
 };
 
 function switchLike(event) {
@@ -121,3 +123,11 @@ function cardSubmit(evt) {
 }
 
 cardForm.addEventListener('submit', cardSubmit);
+
+function closePopupEsc(evt) {
+  if (evt.key === 'Escape') {
+    const modificatorPopup = document.querySelector('.popup_opened');
+    hidePopUp(modificatorPopup);
+  }
+}
+
