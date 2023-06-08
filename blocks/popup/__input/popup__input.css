@@ -25,6 +25,10 @@
     border-bottom: 1px solid red;
 }
 
+.popup__input:invalid:placeholder-shown {
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
 @media screen and (max-width: 724px) {
     .popup__input {
         max-width: 238px;

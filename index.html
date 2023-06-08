@@ -32,11 +32,12 @@
             <button class="popup__close" type="button"></button>
             <p class="popup__title">Редактировать профиль</p>
             <form class="popup__form" id="profile-form">
-                <input class="popup__input popup__input_type_name" type="text" name="name" placeholder="Введите имя"
-                    minlength="2" maxlength="40" required>
-                <input class="popup__input popup__input_type_about-self" type="text" name="about-self"
+                <input class="popup__input popup__input_type_name" type="text" id="name" name="name"
+                    placeholder="Введите имя" minlength="2" maxlength="40" required>
+                <span id="name-error" class="popup__input_type_error popup_opened"></span>
+                <input class="popup__input popup__input_type_about-self" type="text" id="about-self" name="about-self"
                     placeholder="Расскажите о себе" minlength="2" maxlength="200" required>
-                <span class="form__input-error"></span>
+                <span id="about-self-error" class="popup__input_type_error popup_opened"></span>
                 <button class="popup__submit" type="submit">Сохранить</button>
             </form>
         </div>
@@ -45,11 +46,13 @@
         <div class="popup__container">
             <button class="popup__close" type="button"></button>
             <p class="popup__title">Новое место</p>
-            <form class="popup__form" id="card-form">
-                <input class="popup__input popup__input_type_place" type="text" name="place" placeholder="Название"
-                    minlength="2" maxlength="30" required>
-                <input class="popup__input popup__input_type_url" type="url" name="url" placeholder="Ссылка на картинку"
-                    required>
+            <form class="popup__form popup__add-card" id="card-form">
+                <input class="popup__input popup__input_type_place" type="text" id="place" name="place"
+                    placeholder="Название" minlength="2" maxlength="30" required>
+                <span id="place-error" class="popup__input_type_error popup_opened"></span>
+                <input class="popup__input popup__input_type_url" type="url" id="url" name="url"
+                    placeholder="Ссылка на картинку" required>
+                <span id="url-error" class="popup__input_type_error popup_opened" required></span>
                 <button class="popup__submit" type="submit">Сохранить</button>
             </form>
         </div>
@@ -75,6 +78,7 @@
         </article>
     </template>
     <script src="pages/cards.js"></script>
+    <script src="pages/validate.js"></script>
     <script src="pages/script.js"></script>
 </body>
 
