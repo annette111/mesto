@@ -47,13 +47,13 @@ popupCloseButtons.forEach((button) => {
 
 //функция открытия попапа
 function showPopUp(popUp) {
-  popUp.classList.add('popup_opened');
+  popUp.classList.add('popup__opened');
   document.addEventListener('keydown', closePopupEsc);
 }
 
 //функция закрытия попапа
 function hidePopUp(popUp) {
-  popUp.classList.remove('popup_opened');
+  popUp.classList.remove('popup__opened');
   document.removeEventListener('keydown', closePopupEsc);
 }
 
@@ -129,7 +129,7 @@ cardForm.addEventListener('submit', cardSubmit);
 function closePopupEsc(evt) {
   if (evt.key === 'Escape') {
     popups.forEach((popup) => {
-      if (popup.classList.contains('popup_opened')) {
+      if (popup.classList.contains('popup__opened')) {
         hidePopUp(popup);
       }
     })
@@ -138,7 +138,7 @@ function closePopupEsc(evt) {
 
 popups.forEach((popup) => {
   popup.addEventListener("mousedown", function (evt) {
-    if (evt.target.classList.contains("popup_opened") || evt.target.classList.contains("popup__close")) {
+    if (evt.target.classList.contains("popup__opened") || evt.target.classList.contains("popup__close")) {
       hidePopUp(popup);
     }
   });
