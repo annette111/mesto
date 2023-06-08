@@ -128,8 +128,11 @@ cardForm.addEventListener('submit', cardSubmit);
 
 function closePopupEsc(evt) {
   if (evt.key === 'Escape') {
-    const modificatorPopup = document.querySelector('.popup_opened');
-    hidePopUp(modificatorPopup);
+    popups.forEach((popup) => {
+      if (popup.classList.contains('popup_opened')) {
+        hidePopUp(popup);
+      }
+    })
   }
 }
 
