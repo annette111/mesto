@@ -3,7 +3,7 @@ const validationConfig = {
     inputSelector: '.popup__input',
     submitButtonSelector: '.popup__submit',
     inactiveButtonClass: 'popup__button_disabled',
-    inputErrorClass: 'popup__input_type-error',
+    errorClass: 'popup__error_visible',
 }
 
 const cardFormSubmitButtonChangeState = (form) => {
