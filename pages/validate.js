@@ -1,4 +1,4 @@
-const validationConfig = {
+const globalConfig = {
     formSelector: '.popup__form',
     inputSelector: '.popup__input',
     submitButtonSelector: '.popup__submit',
@@ -7,7 +7,7 @@ const validationConfig = {
     errorClass: 'popup__error_visible',
 }
 
-const cardFormSubmitButtonChangeState = (form) => {
+const cardFormSubmitButtonChangeState = (form, validationConfig) => {
     const button = form.querySelector(validationConfig.submitButtonSelector);
     if (!form.checkValidity()) {
         button.setAttribute('disabled', true);
@@ -20,7 +20,6 @@ const cardFormSubmitButtonChangeState = (form) => {
     }
 }
 
-
 const setErrorMassage = (input) => {
     console.log(input.validity);
 }
@@ -29,38 +28,38 @@ const getErrorElement = (input) => {
     return document.querySelector(`#${input.name}-error`)
 }
 
-const hideInputError = (input) => {
+const hideInputError = (input, inputErrorClass) => {
     const errorElement = getErrorElement(input);
     errorElement.textContent = '';
-    input.classList.remove(validationConfig.inputErrorClass);
+    input.classList.remove(inputErrorClass);
 }
 
-const showInputError = (input) => {
+const showInputError = (input, inputErrorClass) => {
     const errorElement = getErrorElement(input);
     setErrorMassage(input);
     errorElement.textContent = input.validationMessage;
-    input.classList.add(validationConfig.inputErrorClass);
+    input.classList.add(inputErrorClass);
 
 }
 
-const validateInput = (input) => {
+const validateInput = (input, inputErrorClass) => {
     if (!input.validity.valid) {
-        showInputError(input);
+        showInputError(input, inputErrorClass);
     } else {
-        hideInputError(input);
+        hideInputError(input, inputErrorClass);
     }
 
 }
 
-function enableValidation() {
+function enableValidation(validationConfig) {
     document.querySelectorAll(validationConfig.formSelector).forEach((popupForm) => {
         popupForm.addEventListener('input', (evt) => {
             const input = evt.target;
             const form = evt.currentTarget;
-            validateInput(input);
-            cardFormSubmitButtonChangeState(form, form.checkValidity());
+            validateInput(input, validationConfig.inputErrorClass);
+            cardFormSubmitButtonChangeState(form, validationConfig, form.checkValidity());
         }, true)
     })
 }
 
-enableValidation();
+enableValidation(globalConfig);

@@ -63,7 +63,7 @@ function switchLike(event) {
 // слушатель кнопки добавить карточку
 btnCardAdd.addEventListener('click', () => {
   showPopUp(popUpAddCard);
-  cardFormSubmitButtonChangeState(popupAddCard);
+  cardFormSubmitButtonChangeState(popupAddCard, globalConfig);
 });
 
 profileForm.addEventListener('submit', handleFormSubmit);
