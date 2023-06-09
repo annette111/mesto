@@ -51,11 +51,6 @@ const validateInput = (input) => {
 
 }
 
-const sendForm = (evt) => {
-    evt.preventDefault();
-}
-
-
 function enableValidation() {
     document.querySelectorAll(validationConfig.formSelector).forEach((popupForm) => {
         popupForm.addEventListener('input', (evt) => {
@@ -64,8 +59,6 @@ function enableValidation() {
             validateInput(input);
             cardFormSubmitButtonChangeState(form, form.checkValidity());
         }, true)
-
-        popupForm.addEventListener('submit', sendForm)
     })
 }
 
