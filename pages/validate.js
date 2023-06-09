@@ -3,6 +3,7 @@ const validationConfig = {
     inputSelector: '.popup__input',
     submitButtonSelector: '.popup__submit',
     inactiveButtonClass: 'popup__button_disabled',
+    inputErrorClass: 'popup__input_invalid',
     errorClass: 'popup__error_visible',
 }
 
@@ -31,14 +32,14 @@ const getErrorElement = (input) => {
 const hideInputError = (input) => {
     const errorElement = getErrorElement(input);
     errorElement.textContent = '';
+    input.classList.remove(validationConfig.inputErrorClass);
 }
 
 const showInputError = (input) => {
     const errorElement = getErrorElement(input);
     setErrorMassage(input);
-
     errorElement.textContent = input.validationMessage;
-
+    input.classList.add(validationConfig.inputErrorClass);
 
 }
 
