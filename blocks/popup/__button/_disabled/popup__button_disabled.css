@@ -3,3 +3,7 @@
     color: rgba(0, 0, 0, 0.15);
     background-color: transparent;
 }
+
+.popup__button_disabled:hover {
+    cursor: default;
+}
