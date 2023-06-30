@@ -1,3 +1,6 @@
+import initialCards from './cards.js';
+import Card from './Сard.js';
+
 //кнопка редактирования профиля
 const btnEditProfile = document.querySelector('.profile__info-button');
 //кнопка закрытия попапа
@@ -50,7 +53,7 @@ function showPopUp(popUp) {
   popUp.classList.add('popup__opened');
   document.addEventListener('keydown', closePopupEsc);
 }
-
+export { showPopUp, imageCardOpen, titleCardOpen, popupPictureOpen }
 //функция закрытия попапа
 function hidePopUp(popUp) {
   popUp.classList.remove('popup__opened');
@@ -77,32 +80,32 @@ function handleFormSubmit(evt) {
 
 
 
-function createCard(card) {
+// function createCard(card) {
 
-  const cardElement = cardTemplate.content.cloneNode(true);
-  const titleCard = cardElement.querySelector('.element__title');
-  const buttonDelete = cardElement.querySelector('.element__button-delete');
-  const imageCard = cardElement.querySelector('.element__image');
-  const btnLike = cardElement.querySelector('.element__button');
-  titleCard.textContent = card.name;
-  imageCard.addEventListener('click', openPopUpImage);
+//   const cardElement = cardTemplate.content.cloneNode(true);
+//   const titleCard = cardElement.querySelector('.element__title');
+//   const buttonDelete = cardElement.querySelector('.element__button-delete');
+//   const imageCard = cardElement.querySelector('.element__image');
+//   const btnLike = cardElement.querySelector('.element__button');
+//   titleCard.textContent = card.name;
+//   imageCard.addEventListener('click', openPopUpImage);
 
-  function openPopUpImage() {
-    imageCardOpen.src = card.link;
-    titleCardOpen.textContent = card.name;
-    showPopUp(popupPictureOpen);
-  }
+//   function openPopUpImage() {
+//     imageCardOpen.src = card.link;
+//     titleCardOpen.textContent = card.name;
+// showPopUp(popupPictureOpen);
+//   }
 
-  imageCard.setAttribute('src', card.link);
-  imageCard.setAttribute('alt', card.name);
-  btnLike.addEventListener('click', switchLike);
-  buttonDelete.addEventListener('click', deleteCard);
-  return cardElement;
-}
+//   imageCard.setAttribute('src', card.link);
+//   imageCard.setAttribute('alt', card.name);
+//   btnLike.addEventListener('click', switchLike);
+//   buttonDelete.addEventListener('click', deleteCard);
+//   return cardElement;
+// }
 
 function renderCard(card) {
-  const newcard = createCard(card);
-  elements.prepend(newcard);
+  const newcard = new Card(card);
+  elements.prepend(newcard.getView());
 }
 
 initialCards.forEach(renderCard);
